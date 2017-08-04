@@ -1,0 +1,13 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /webhook/.*
+  script: main.app
+- url: /.*
+  script: main.app
+
+libraries:
+- name: ssl
+  version: latest
